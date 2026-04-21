@@ -1,0 +1,19 @@
+# Build artifacts
+target/
+*.class
+
+# Java / Maven
+.mvn/wrapper/maven-wrapper.jar
+HELP.md
+
+# VS Code settings
+.vscode/
+
+# Secrets & Configs
+src/main/resources/application-local.properties
+.env
+
+# Logs & OS trash
+*.log
+.DS_Store
+Thumbs.db
