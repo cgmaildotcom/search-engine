@@ -1,4 +1,13 @@
 package searchengine.secgmaildotcom.dto;
 
-public record PersonalityResponse() {
+import java.time.LocalDate;
+
+public record PersonalityResponse(
+    String name,
+    String education,
+    String spouse,
+    String children,
+    LocalDate dateOfBirth,
+    LocalDate dateOfDeath
+) {
 }
