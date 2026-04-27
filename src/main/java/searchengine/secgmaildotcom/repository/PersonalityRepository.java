@@ -3,16 +3,18 @@ package searchengine.secgmaildotcom.repository;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import searchengine.secgmaildotcom.dto.PersonalityResponse;
+import searchengine.secgmaildotcom.entity.PersonalityEntity;
 
 @Repository
-public interface PersonalityRepository extends JpaRepository <PersonalityResponse, Long> {  
+public interface PersonalityRepository extends JpaRepository <PersonalityEntity, Long> {  
 
-    public List<PersonalityResponse> findAll();
+    public Page<PersonalityEntity> findAll(Pageable pageable);
 
-    public List<PersonalityResponse> findAllById(Collection<Long> ids);
+    public List<PersonalityEntity> findAllById(Collection<Long> ids);
 
 } 
